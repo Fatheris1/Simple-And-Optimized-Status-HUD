@@ -6,7 +6,8 @@
 **Dowloand Here - **
 
 **Preview:**
-![HUD-PREVIEW|483x259, 75%](upload://gZxkajuGzEDfN9sDaN9itibXtWM.jpeg)
+![image](https://github.com/user-attachments/assets/8a2b7a92-76b9-4faf-b557-b90aa83ca9f8)
+
 -
 
 *In config you can change the framework, remove the id and player location display if you don't need or you don't like, and change the ppdate interval time.*
