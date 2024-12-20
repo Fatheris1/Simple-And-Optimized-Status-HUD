@@ -1,0 +1,135 @@
+:root {
+    --bar-color: #00a3ff;
+    --bar-glow: #00a3ff80;
+    --icon-color: #ffffff;
+    --text-color: #ffffff;
+}
+
+#status-hud {
+    position: fixed;
+    bottom: 3.5vh;
+    left: 29vh;
+    font-family: 'Rajdhani', sans-serif;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hud-container {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.stats-container {
+    padding-left: 15px;
+    border-left: 2px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.stat-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 4px;
+    transition: all 0.3s ease;
+}
+
+.stat-bar:hover {
+    transform: translateX(2px);
+}
+
+.stat-info {
+    display: flex;
+    align-items: center;
+    min-width: 48px;
+}
+
+.stat-bar i {
+    font-size: 12px;
+    color: var(--icon-color);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.15) 0%, rgba(44, 44, 44, 0.05) 100%);
+    padding: 4px 6px;
+    border-radius: 3px;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.stat-info .value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-color);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
+}
+
+.bar-progress {
+    width: 38px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bar-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--bar-color);
+    transition: width 0.3s ease;
+    box-shadow: 0 0 8px var(--bar-glow);
+}
+
+.hidden {
+    display: none;
+}
+
+.player-id, .player-location {
+    position: fixed;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.15) 0%, rgba(44, 44, 44, 0.05) 100%);
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    bottom: 20.2%;
+}
+
+.player-id {
+    left: 33px;
+}
+
+.player-location {
+    left: 116px;
+}
+
+.player-id i, .player-location i {
+    font-size: 12px;
+    color: var(--icon-color);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+    padding-right: 8px;
+    border-right: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.id-value, .location-value {
+    color: #fff;
+    margin-left: 4px;
+}
+
+/* Animations And Effecs :0 */
+@keyframes pulse {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
